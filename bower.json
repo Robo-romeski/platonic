@@ -1,0 +1,16 @@
+{
+  "name": "platonic",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Robo-romeski/platonic",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
