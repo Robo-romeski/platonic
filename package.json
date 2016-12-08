@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "sass": "sass --watch public/sass/style.scss:public/css/style.css"
   },
   "dependencies": {
     "angular": "^1.5.8",

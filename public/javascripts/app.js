@@ -1,6 +1,1 @@
-/**
-* friendzone Module
-*
-* Description
-*/
-angular.module('friendzone', []);
+angular.module('friendZone', ['ui.router']);
