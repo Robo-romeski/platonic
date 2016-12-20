@@ -187,7 +187,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-
+.slate {
+	background: url('../images/wood.jpg');
+}
 .gtco-nav {
 	position: absolute;
 	top: 0;
@@ -905,7 +907,7 @@ form {
 		margin-bottom: 10px;
 		line-height: 1.5;
 		font-weight: 300;
-		color: $brand-black;
+		color: $brand-white;
 		position: relative;
 		@media screen and (max-width: $screen-sm) {
 			font-size: 26px;
