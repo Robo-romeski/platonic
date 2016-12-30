@@ -1,1 +1,1 @@
-angular.module('friendZone', ['ui.router']);
+angular.module('friendZone', ['ui.router','ngVidBg']);
