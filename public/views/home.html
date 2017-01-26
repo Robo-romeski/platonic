@@ -6,7 +6,7 @@
 				<div class="col-md-12 col-md-offset-0 text-left">
 					
 
-					<div class="row row-mt-15em">
+					<div class="row row-mt-15em" ng-controller="tabCtrl" >
 						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
 							<span class="intro-text-small">Welcome to FriendZone!</span>
 							<h1>Do dope stuff with dope people...</h1>	
@@ -15,11 +15,11 @@
 							<div class="form-wrap">
 								<div class="tab">
 									<ul class="tab-menu">
-										<li class="active gtco-first"><a href="#" data-tab="signup">Sign up</a></li>
-										<li class="gtco-second"><a href="#" data-tab="login">Login</a></li>
+										<li ng-class="{active: tab == 'signup'}" class="gtco-first"><a href="#" data-tab="signup" ng-click="tab = 'signup'" >Sign up</a></li>
+										<li ng-class="{active: tab == 'login'}" class="gtco-second"><a href="#" data-tab="login" ng-click="tab = 'login'" >Login</a></li>
 									</ul>
-									<div class="tab-content">
-										<div class="tab-content-inner active" data-content="signup">
+									<div ng-switch="tab" class="tab-content">
+										<div ng-class="{active: tab == 'signup'}" class="tab-content-inner" ng-switch-when="signup" data-content="signup">
 											<form action="/login" method="post">
 												<div class="row form-group">
 													<div class="col-md-12">
@@ -48,7 +48,7 @@
 											</form>	
 										</div>
 
-										<div class="tab-content-inner" data-content="login">
+										<div ng-class="{active: tab == 'login'}" class="tab-content-inner" ng-switch-when="login" data-content="login">
 											<form action="#">
 												<div class="row form-group">
 													<div class="col-md-12">

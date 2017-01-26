@@ -21,3 +21,6 @@ $scope.alternate = ['./videos/vid3.mp4'];
 			$scope.currentResourceIdx = 0;
 			$scope.playInfo = {};
 }])
+fz.controller('tabCtrl', ['$scope', function($scope){
+	$scope.tab = 'login';
+}])
