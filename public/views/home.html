@@ -20,29 +20,41 @@
 									</ul>
 									<div ng-switch="tab" class="tab-content">
 										<div ng-class="{active: tab == 'signup'}" class="tab-content-inner" ng-switch-when="signup" data-content="signup">
-											<form action="/login" method="post">
+											<form action="/register" method="post">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username or Email</label>
-														<input type="text" class="form-control" id="username" name="username">
+														<input type="text" class="form-control" id="username" name="username" required>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="firstName">First Name</label>
+														<input type="firstName" class="form-control" id="firstName" name="firstName" required>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="lastName">Last Name</label>
+														<input type="lastName" class="form-control" id="lastName" name="lastName" required>
 													</div>
 												</div>
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="password">Password</label>
-														<input type="password" class="form-control" id="password" name="password">
+														<input type="password" class="form-control" id="password" name="password" required>
 													</div>
 												</div>
-												<div class="row form-group">
+												<!-- <div class="row form-group">
 													<div class="col-md-12">
 														<label for="password2">Repeat Password</label>
 														<input type="password" class="form-control" id="password2">
 													</div>
-												</div>
+												</div> -->
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary" value="Sign up">
+														<button type="submit" class="btn btn-primary" value="Sign up">
 													</div>
 												</div>
 											</form>	
