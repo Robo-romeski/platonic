@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "sass": "sass --watch public/sass/style.scss:public/css/style.css"
   },
   "dependencies": {
