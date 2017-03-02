@@ -7,11 +7,9 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "sass": "sass --watch public/sass/style.scss:public/css/style.css",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "sass": "sass --watch public/sass/style.scss:public/css/style.css"
   },
   "dependencies": {
-    "bower": "0.6.x",
     "angular": "^1.5.8",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
