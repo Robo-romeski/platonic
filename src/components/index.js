@@ -7,6 +7,7 @@ import Home from './Home'
 import Dashboard from './protected/Dashboard'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
+import Navigation from './navigation/index'
 
 function PrivateRoute ({component: Component, authed, ...rest}) {
   return (
@@ -57,34 +58,7 @@ export default class App extends Component {
     return this.state.loading === true ? <h1>Loading</h1> : (
       <BrowserRouter>
         <div>
-          <nav className="navbar navbar-default navbar-static-top">
-            <div className="container">
-              <div className="navbar-header">
-                <Link to="/" className="navbar-brand">React Router + Firebase Auth</Link>
-              </div>
-              <ul className="nav navbar-nav pull-right">
-                <li>
-                  <Link to="/" className="navbar-brand">Home</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
-                </li>
-                <li>
-                  {this.state.authed
-                    ? <button
-                        style={{border: 'none', background: 'transparent'}}
-                        onClick={() => {
-                          logout()
-                        }}
-                        className="navbar-brand">Logout</button>
-                    : <span>
-                        <Link to="/login" className="navbar-brand">Login</Link>
-                        <Link to="/register" className="navbar-brand">Register</Link>
-                      </span>}
-                </li>
-              </ul>
-            </div>
-          </nav>
+        <Navigation/>
           <div className="container">
             <div className="row">
               <Switch>
