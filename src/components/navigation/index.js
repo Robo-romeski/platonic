@@ -33,10 +33,13 @@ function PrivateRoute ({component: Component, authed, ...rest}) {
   }
 
 export default class Navi extends Component {
-    state = {
-        authed: false,
-        loading: true,
-      }
+  constructor(props){
+    super(props);
+    this.state = {
+      authed: false,
+      loading: true,
+    }
+  }
       componentDidMount () {
         this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
           if (user) {
@@ -55,7 +58,9 @@ export default class Navi extends Component {
       componentWillUnmount () {
         this.removeListener()
       }
+      
     render(){
+      console.log('lists', this.props , this.state);
         return(
           <div className="page-inner">
           <nav className="gtco-nav" role="navigation">

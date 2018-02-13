@@ -8,6 +8,7 @@ import Dashboard from './protected/Dashboard'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 import Navigation from './navigation/index'
+import Features from './features/features'
 
 function PrivateRoute ({component: Component, authed, ...rest}) {
   return (
@@ -58,7 +59,8 @@ export default class App extends Component {
     return this.state.loading === true ? <h1>Loading</h1> : (
       <BrowserRouter>
         <div>
-        <Navigation/>
+        <Navigation auth={this.props.authed}/>
+        <Features/>
           <div className="container">
             <div className="row">
               <Switch>
