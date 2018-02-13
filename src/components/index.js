@@ -7,7 +7,7 @@ import Home from './Home'
 import Dashboard from './protected/Dashboard'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
-import Navigation from './navigation/index'
+import Navigation from './navigation/navigation'
 import Features from './features/features'
 
 function PrivateRoute ({component: Component, authed, ...rest}) {
@@ -60,13 +60,10 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
         <Navigation auth={this.props.authed}/>
-        <Features/>
           <div className="container">
             <div className="row">
               <Switch>
                 <Route path='/' exact component={Home} />
-                <PublicRoute authed={this.state.authed} path='/login' component={Login} />
-                <PublicRoute authed={this.state.authed} path='/register' component={Register} />
                 <PrivateRoute authed={this.state.authed} path='/dashboard' component={Dashboard} />
                 <Route render={() => <h3>No Match</h3>} />
               </Switch>
